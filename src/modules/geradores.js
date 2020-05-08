@@ -9,7 +9,8 @@ const geradores = [
 ]
 
 
-export default function geraSenha(qtd) {
+export default function geraSenha(qtd, max, min, num, sim) {
+    if (!max && !min && !num && !sim) return false
     const senhaArray = []
     qtd = Number(qtd)
     while (senhaArray.length<qtd) {
