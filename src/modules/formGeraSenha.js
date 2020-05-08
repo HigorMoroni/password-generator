@@ -1,6 +1,6 @@
 import geraSenha from './geradores'
 
-const senhaGerada = document.querySelector('.senha-gerada')
+const senhaGerada = document.querySelector('.senha-gerada span')
 const qtdCaracteres = document.querySelector('.qtd-caracteres')
 const chkMaiusculas = document.querySelector('.chk-maiusculas')
 const chkMinusculas = document.querySelector('.chk-minusculas')
@@ -11,7 +11,15 @@ const btnCopiar = document.querySelector('i.fa-copy')
 
 export default () => {
     btnGerarSenha.addEventListener('click', () => {
-        senhaGerada.innerHTML = gera()
+        const senha = gera()
+        if (senha){
+            senhaGerada.innerHTML = senha
+            btnCopiar.style.display = 'inline'
+        } else {
+            senhaGerada.innerHTML = "Nenhuma opção selecionada"
+            btnCopiar.style.display = 'none'
+        }
+        
     })
     btnCopiar.addEventListener('click', () => {
         senhaGerada.select()
@@ -28,5 +36,5 @@ function gera() {
         chkNumeros.checked,
         chkSimbolos.checked
     )
-    return senha || "Nenhuma opção selecionada"
+    return senha
 }

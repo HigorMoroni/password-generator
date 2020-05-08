@@ -67,3 +67,7 @@ button {
   margin: 40px 0;
   font-size: 1em;
 }
+
+i.fa-copy {
+  display: none;
+}
