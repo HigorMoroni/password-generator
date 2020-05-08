@@ -15,12 +15,8 @@ export default function geraSenha(qtd, max, min, num, sim) {
     qtd = Number(qtd)
     while (senhaArray.length<qtd) {
         const caract = rand(0,5)
-        console.log(caract)
         const podeGerar = arguments[(caract+1)] ? true : false
-        console.log(podeGerar)
         if (podeGerar) senhaArray.push(geradores[caract]())
-        console.log(senhaArray)
-        console.log(senhaArray.length)
     }
     return senhaArray.join('')
 }

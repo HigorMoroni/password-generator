@@ -71,3 +71,7 @@ button {
 i.fa-copy {
   display: none;
 }
+
+i.fa-copy:hover {
+  fill: yellow;
+}
