@@ -11,6 +11,15 @@ const btnCopiar = document.querySelector('i.fa-copy')
 
 export default () => {
     btnGerarSenha.addEventListener('click', () => {
+        if (Number(qtdCaracteres.value)>30) {
+            senhaGerada.innerHTML = "Quantidade máxima permitida: 30"
+            btnCopiar.style.display = 'none'
+            return
+        } else if (Number(qtdCaracteres.value)<1) {
+            senhaGerada.innerHTML = "Quantidade mínima permitida: 1"
+            btnCopiar.style.display = 'none'
+            return
+        }
         const senha = gera()
         if (senha){
             senhaGerada.innerHTML = senha
