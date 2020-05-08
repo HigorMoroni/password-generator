@@ -16,11 +16,11 @@ export default () => {
 
 function gera() {
     const senha = geraSenha(
-        qtdCaracteres.nodeValue,
+        qtdCaracteres.value,
         chkMaiusculas.checked,
         chkMinusculas.checked,
         chkNumeros.checked,
-        chkSimbolos.checked,
+        chkSimbolos.checked
     )
     return senha || "Nenhuma opção selecionada"
 }
