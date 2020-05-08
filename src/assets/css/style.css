@@ -70,8 +70,10 @@ button {
 
 i.fa-copy {
   display: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }
 
 i.fa-copy:hover {
-  fill: yellow;
+  color: black;
 }
