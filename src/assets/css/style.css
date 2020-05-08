@@ -77,3 +77,7 @@ i.fa-copy {
 i.fa-copy:hover {
   color: black;
 }
+
+input.senha {
+  width: 90%;
+}
