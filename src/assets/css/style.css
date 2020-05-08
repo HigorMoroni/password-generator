@@ -53,6 +53,23 @@ button {
   margin-top: 30px;
 }
 
-button:hover {
+form button:hover {
   background: var(--primary-color-darker);
+}
+
+.senha-gerada {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin: 40px 0;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+button {
+  display: block;
+  margin: 40px 0;
+  font-size: 1em;
 }
