@@ -6,7 +6,7 @@ const geraMinuscula = () => String.fromCharCode(rand(97, 123))
 const geraNumero = () => String.fromCharCode(rand(48, 58))
 const geraSimbolo = () => simbolos[rand(0, simbolos.length)]
 
-function geraSenha(qtd, mai, min, num, sim) {
+export default function geraSenha(qtd, mai, min, num, sim) {
     const senhaArray = []
     qtd = Number(qtd)
     for(let i=0;i<qtd;i++) {
@@ -15,4 +15,5 @@ function geraSenha(qtd, mai, min, num, sim) {
         num && senhaArray.push(geraNumero())
         sim && senhaArray.push(geraSimbolo())
     }
+    return senhaArray.join('').slice(0,qtd)
 }
